@@ -15,22 +15,56 @@
 
 ## Beschrijving
 
-<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+Dit is een realtime chatroom die ik heb gemaakt voor de "My first chatroom" deeltaak. De chatroom is gemaakt in de huisstijl van PlantSwap. Door de chatroom te maken heb ik een beetje kunnen oefenen met socket.
 
 ## Tools
 
-<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+🧦Socket.io
+
+🚂Express
+
+🥜Node.js
+
+🖥️HTML
+
+🖌️CSS
 
 ## Extra functionaliteiten
 
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+Voor de extra functionaliteiten heb ik toegevoegd dat de kleur van het bericht van de gebruiker anders is dan de kleur van het bericht van de ontvanger. De gebruiker ziet zijn eigen berichten rechts uitgelijnd in het oranje. De gebruiker ziet de berichten van andere gebruikers links uitgelijnd in het groen. Ik heb dit op de volgende manier gedaan; 
+
+Eerst heb ik op de server side een emit uitgevoerd. Een emit is een custom verzoek naar de (socket) server. In deze emit stop ik de message en een user id. In uid zit een id wat socket voor het bericht aanmaakt. 
+
+```js io.emit('message', {uid: socket.id, message: message})```
+
+Vervolgens heb ik client side een functie gemaakt om de 
+
+```js
+function addMessage(uid, message) {
+// er is een uid voor het bericht en de ioServer.id is voor de gebruiker.
+  console.log(uid, ioServer.id)
+  let messageClass = ''
+// als er een uid is(wat er altijd is) voer dan de volgende code uit
+  if(uid){
+    Alle kinderen van de variabele messages krijgen een li eraan toegevoegd
+  ```js
+    const messageConst = messages.appendChild(Object.assign(document.createElement('li'), {textContent: message }))
+  ```
+    Als de message id overeenkomt met de ioServer id dan is het bericht van de gebruiker zelf
+    Er wordt een class met de uitlijning aan het variabele messageConst toegevoegd
+    ```js
+    if (uid == ioServer.id) {
+      messageConst.classList.add('eigen-bericht')
+    }
+    messages.scrollTop = messages.scrollHeight
+  }
+}
+```
 
 ## Bronnen
-Justus
-Krijn
-Tolga
+[Justus](https://github.com/ju5tu5)
+[Tolga](https://github.com/Tolga1999)
+[Krijn](https://github.com/krijnhoetmer)
 
 ## Licentie
 
