@@ -1,8 +1,8 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# Titel
+# My first chatroom in PlantSwap huisstijl
 
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+![WhatsApp_Video_2023-05-22_at_18_02_39_AdobeExpress](https://github.com/Demivdm/connecting-people-my-first-chatroom/assets/112861166/9a217291-ba32-4533-a7ef-7bc4b48019d8)
 
 ## Inhoudsopgave
 
