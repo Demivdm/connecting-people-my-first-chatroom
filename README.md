@@ -9,7 +9,7 @@
 - [Beschrijving](#beschrijving)
 - [Tools](#tools)
 - [Kenmerken](#kenmerken)
-- [Installatie](#extra-functionaliteiten)
+- [Extra functionaliteiten](#extra-functionaliteiten)
 - [Bronnen](#bronnen)
 - [Licentie](#licentie)
 
