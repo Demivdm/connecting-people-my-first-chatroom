@@ -46,7 +46,7 @@ io.on('connection', (socket) => {
     }
     // Voeg het toe aan de historie
     history.push(message)
-    // Verstuur het bericht naar alle clients
+    // Verstuur het bericht naar alle clients, socket id toegevoegd, en content van het bericht toegevoegd
     io.emit('message', {uid: socket.id, message: message})
   })
 
