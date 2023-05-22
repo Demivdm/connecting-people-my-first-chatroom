@@ -31,29 +31,19 @@ ioServer.on('message', (message) => {
  * @param {*} message the message to append
  */
 function addMessage(uid, message) {
-
+// er is een uid voor het bericht en de ioServer.id is voor de gebruiker.
   console.log(uid, ioServer.id)
   let messageClass = ''
 
   if(uid){
+    // Alle kinderen van de variabele messages krijgen een li eraan toegevoegd
     const messageConst = messages.appendChild(Object.assign(document.createElement('li'), {textContent: message }))
     
+    // als de message id overeenkomt met de ioServer id dan is het bericht van de gebruiker zelf
+    // Er wordt een class met de uitlijning aan het variabele messageConst toegevoegd
     if (uid == ioServer.id) {
       messageConst.classList.add('eigen-bericht')
     }
     messages.scrollTop = messages.scrollHeight
   }
 }
-
-// naam en tijd toevoegen
-socket.on('chat', data => {
-  feedback.innerHTML = ''
-  messages.innerHTML += `
-  <div class="message-background">
-    <p class="time">${data.time}</p>
-    <p>${data.input}</p>
-  </div>
-  <h3 class="message-handle">${data.handle}</h3>
-  `
-  messages.scrollTop = messages.scrollHeight
-})

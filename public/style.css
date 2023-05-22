@@ -141,7 +141,7 @@ main{
 }
 
 .eigen-bericht{
-  background-color: red;
+  background-color: var(--secondary);
   width: 50%;
   text-align: right;
   align-self: flex-end;
