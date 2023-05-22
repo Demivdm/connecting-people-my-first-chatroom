@@ -7,9 +7,9 @@
 ## Inhoudsopgave
 
 - [Beschrijving](#beschrijving)
-- [Gebruik](#gebruik)
+- [Tools](#tools)
 - [Kenmerken](#kenmerken)
-- [Installatie](#installatie)
+- [Installatie](#extra-functionaliteiten)
 - [Bronnen](#bronnen)
 - [Licentie](#licentie)
 
@@ -19,19 +19,18 @@
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
-## Gebruik
+## Tools
 
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 
-## Kenmerken
+## Extra functionaliteiten
 
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 
-## Installatie
-
-<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
-
 ## Bronnen
+Justus
+Krijn
+Tolga
 
 ## Licentie
 
