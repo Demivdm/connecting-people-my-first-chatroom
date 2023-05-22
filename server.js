@@ -34,7 +34,7 @@ app.use(express.static(path.resolve('public')))
 
 io.on('connection', (socket) => {
   // Log de connectie naar console
-  console.log('a user connected')
+  console.log(`user ${socket.id} connected`)
   // Stuur de historie door, let op: luister op socket, emit op io!
   io.emit('history', history)
 
@@ -47,7 +47,7 @@ io.on('connection', (socket) => {
     // Voeg het toe aan de historie
     history.push(message)
     // Verstuur het bericht naar alle clients
-    io.emit('message', message)
+    io.emit('message', {uid: socket.id, message: message})
   })
 
   // Luister naar een disconnect van een gebruiker

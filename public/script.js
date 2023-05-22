@@ -18,7 +18,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
 
 // Luister naar berichten van de server
 ioServer.on('message', (message) => {
-  addMessage(message)
+  addMessage(message.uid, message.message)
 })
 
 /**
@@ -26,7 +26,10 @@ ioServer.on('message', (message) => {
  * global messages object and then scrolls the list to the last message.
  * @param {*} message the message to append
  */
-function addMessage(message) {
-  messages.appendChild(Object.assign(document.createElement('li'), { textContent: message }))
+function addMessage(uid, message) {
+  console.log(uid, ioServer.id)
+  let deClass = ''
+  // if()
+  messages.appendChild(Object.assign(document.createElement('li'), { class: deClass, textContent: message }))
   messages.scrollTop = messages.scrollHeight
 }
