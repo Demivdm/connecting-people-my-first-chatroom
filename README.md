@@ -42,7 +42,6 @@ Vervolgens heb ik client side een functie gemaakt om de
 ```js
 function addMessage(uid, message) {
 // er is een uid voor het bericht en de ioServer.id is voor de gebruiker.
-  console.log(uid, ioServer.id)
   let messageClass = ''
 // als er een uid is(wat er altijd is) voer dan de volgende code uit
   if(uid){
@@ -52,6 +51,7 @@ function addMessage(uid, message) {
   ```
     Als de message id overeenkomt met de ioServer id dan is het bericht van de gebruiker zelf
     Er wordt een class met de uitlijning aan het variabele messageConst toegevoegd
+    
     ```js
     if (uid == ioServer.id) {
       messageConst.classList.add('eigen-bericht')
