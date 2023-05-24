@@ -37,22 +37,25 @@ Eerst heb ik op de server side een emit uitgevoerd. Een emit is een custom verzo
 
 ```js io.emit('message', {uid: socket.id, message: message})```
 
-Vervolgens heb ik client side een functie gemaakt om de 
+Vervolgens heb ik client side een functie gemaakt om te herkennen van wie het bericht is. 
 
 ```js
 function addMessage(uid, message) {
 // er is een uid voor het bericht en de ioServer.id is voor de gebruiker.
   let messageClass = ''
-// als er een uid is(wat er altijd is) voer dan de volgende code uit
-  if(uid){
-    Alle kinderen van de variabele messages krijgen een li eraan toegevoegd
-  ```js
-    const messageConst = messages.appendChild(Object.assign(document.createElement('li'), {textContent: message }))
-  ```
-    Als de message id overeenkomt met de ioServer id dan is het bericht van de gebruiker zelf
-    Er wordt een class met de uitlijning aan het variabele messageConst toegevoegd
+ ```
+Als er een uid is(wat er altijd is) voer dan de volgende code uit:
+
+ ```js  if(uid){ ```
+ 
+ Alle kinderen van de variabele "messages" krijgen een li eraan toegevoegd.
+ 
+ ```js
+ const messageConst = messages.appendChild(Object.assign(document.createElement('li'), {textContent: message }))
+ ```
+Als de message id overeenkomt met de ioServer id dan is het bericht van de gebruiker zelf dan wordt een class met de uitlijning aan het variabele messageConst toegevoegd.
     
-    ```js
+ ```js
     if (uid == ioServer.id) {
       messageConst.classList.add('eigen-bericht')
     }
